@@ -1,0 +1,24 @@
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'com.jagrosh:jda-utilities:2.1'
+    compile 'com.jagrosh:jda-utilities-command:2.1'
+    compile 'net.dv8tion:JDA:3.5.0_327'
+}
+
+jar {
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+
+    manifest {
+        attributes 'Main-Class': 'PromethiumEngine.PromethiumGUI',
+                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+    }
+}

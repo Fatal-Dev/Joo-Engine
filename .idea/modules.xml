@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Promethium-Engine.iml" filepath="$PROJECT_DIR$/.idea/modules/Promethium-Engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Promethium-Engine_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Promethium-Engine_main.iml" group="Promethium-Engine" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Promethium-Engine_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Promethium-Engine_test.iml" group="Promethium-Engine" />
+    </modules>
+  </component>
+</project>

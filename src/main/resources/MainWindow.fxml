@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PromethiumEngine.FXML.MainController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Welcome">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="122.0" layoutY="68.0" text="Promethium Engine" underline="true">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="262.0" text="Join the Discord" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="319.0" layoutY="262.0" text="Visit the Github" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="publicDiscord" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#handlePublicDiscord" prefHeight="65.0" prefWidth="65.0">
+                           <graphic>
+                              <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@FXML/Resources/discord.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="githubPage" layoutX="379.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleGithubPage" prefHeight="65.0" prefWidth="65.0">
+                           <graphic>
+                              <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@FXML/Resources/github.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="158.0" layoutY="106.0" text="Control Panel" underline="true">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Start Bot">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="177.0" layoutY="14.0" text="Bot Token" textAlignment="CENTER" underline="true" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="75.0" text="Bot Prefix" textAlignment="CENTER" underline="true" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="181.0" layoutY="136.0" text="Owner ID" underline="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tokenField" layoutX="110.0" layoutY="50.0" prefHeight="25.0" prefWidth="250.0" promptText="Token Goes Here..." />
+                        <TextField fx:id="prefixField" layoutX="108.0" layoutY="111.0" prefHeight="25.0" prefWidth="250.0" promptText="Prefix Goes Here..." />
+                        <TextField fx:id="ownerIdField" layoutX="108.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" promptText="Owner ID Goes Here..." />
+                        <CheckBox fx:id="reuseToken" layoutX="171.0" layoutY="221.0" mnemonicParsing="false" text="Reuse Options" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <Button fx:id="startBot" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleStartBotButton" prefHeight="100.0" prefWidth="150.0" text="Bot Away!" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Manage">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <TextArea fx:id="console" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="310.0" prefWidth="300.0" promptText="Bot Log Comes Out Here..." />
+                        <Button fx:id="stopBot" disable="true" layoutX="326.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStopButton" prefHeight="40.0" prefWidth="130.0" text="Stop Bot">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="stopBotNow" disable="true" layoutX="326.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleStopNowButton" prefHeight="40.0" prefWidth="130.0" text="Stop Bot NOW">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="restartBot" disable="true" layoutX="326.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="130.0" text="Restart Bot">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="restartBotNow" disable="true" layoutX="326.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleRestartNowButton" prefHeight="40.0" prefWidth="130.0" text="Restart Bot NOW">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="consoleInput" layoutX="14.0" layoutY="325.0" prefHeight="38.0" prefWidth="375.0" promptText="Type Commands Here..." />
+                        <Button fx:id="sendConsoleInput" layoutX="391.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleConsoleInput" prefHeight="38.0" prefWidth="70.0" text="Send">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Options">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
