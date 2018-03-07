@@ -1,5 +1,5 @@
-# Promethium Engine
-## The Discord Bots Run By You
+# Joo Engine
+## The Discord Bots Run By Me
 
 ##### Promethium Engine running discord bots the yourself simple and very customizable
 ##### It includes an easy to use GUI for management and customization
