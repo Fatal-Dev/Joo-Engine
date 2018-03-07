@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PromethiumEngine.FXML.MainController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="470.0" style="-fx-background-color: #515151;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: white;" text="Welcome">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #515151;">
+                     <children>
+                        <Label layoutX="122.0" layoutY="68.0" text="Promethium Engine" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="262.0" text="Join the Discord" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="319.0" layoutY="262.0" text="Visit the Github" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="publicDiscord" layoutX="14.0" layoutY="292.0" mnemonicParsing="false" onAction="#handlePublicDiscord" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: grey;">
+                           <graphic>
+                              <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="https://camo.githubusercontent.com/5a3b831c5896aa1e9bf719029b2911e9476a6751/687474703a2f2f692e696d6775722e636f6d2f74796f764963652e706e67" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="githubPage" layoutX="379.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleGithubPage" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: grey;">
+                           <graphic>
+                              <ImageView fitHeight="61.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label layoutX="158.0" layoutY="106.0" text="Control Panel" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="startBotNow" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStartBotNow" style="-fx-background-color: #515151;" textFill="WHITE" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-background-color: white;" text="Make Bot">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #515151;">
+                     <children>
+                        <Label layoutX="177.0" layoutY="14.0" text="Bot Token" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="180.0" layoutY="75.0" text="Bot Prefix" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="181.0" layoutY="136.0" text="Owner ID" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tokenField" layoutX="110.0" layoutY="50.0" prefHeight="25.0" prefWidth="250.0" promptText="Token Goes Here..." style="-fx-background-color: grey;" />
+                        <TextField fx:id="prefixField" layoutX="108.0" layoutY="111.0" prefHeight="25.0" prefWidth="250.0" promptText="Prefix Goes Here..." style="-fx-background-color: grey;" />
+                        <TextField fx:id="ownerIdField" layoutX="108.0" layoutY="173.0" prefHeight="25.0" prefWidth="250.0" promptText="Owner ID Goes Here..." style="-fx-background-color: grey;" />
+                        <CheckBox fx:id="reuseToken" layoutX="171.0" layoutY="221.0" mnemonicParsing="false" style="-fx-background-color: #515151;" text="Reuse Options" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <Button fx:id="startBot" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleStartBotButton" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: grey;" text="Create" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab style="-fx-background-color: white;" text="Manage">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <TextArea fx:id="console" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="299.0" prefWidth="300.0" promptText="Bot Log Comes Out Here..." style="-fx-background-color: grey;">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Button fx:id="stopBot" disable="true" layoutX="326.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStopButton" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: grey;" text="Stop Bot" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="stopBotNow" disable="true" layoutX="326.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleStopNowButton" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: grey;" text="Stop Bot NOW" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="restartBot" disable="true" layoutX="326.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: grey;" text="Restart Bot" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="restartBotNow" disable="true" layoutX="326.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleRestartNowButton" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: grey;" text="Restart Bot NOW" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="consoleInput" layoutX="14.0" layoutY="325.0" prefHeight="38.0" prefWidth="375.0" promptText="Type Commands Here..." />
+                        <Button fx:id="sendConsoleInput" layoutX="391.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleConsoleInput" prefHeight="38.0" prefWidth="70.0" style="-fx-background-color: grey;" text="Send" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab style="-fx-background-color: white;" text="Options">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

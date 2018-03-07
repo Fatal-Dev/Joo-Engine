@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="280.0" style="-fx-background-color: #515151;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PromethiumEngine.FXML.ExitController">
+   <children>
+      <Label layoutX="36.0" layoutY="14.0" text="Are You Sure You Want To Exit?" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="47.0" text="The Bot May Still Be Running!" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" layoutX="111.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleExitButton" style="-fx-background-color: grey;" text="Yes, Exit" textFill="WHITE" />
+      <Button fx:id="cancelButton" layoutX="96.0" layoutY="131.0" mnemonicParsing="false" onAction="#handleCancelButton" style="-fx-background-color: grey;" text="No, Don't Exit" textFill="WHITE" />
+   </children>
+</AnchorPane>
